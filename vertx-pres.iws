@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73463702-773a-434f-9087-68deed038a15" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HelloClient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WebServer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HelloClient.java" afterPath="$PROJECT_DIR$/HelloClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vertx-pres.iws" afterPath="$PROJECT_DIR$/vertx-pres.iws" />
     </list>
     <ignored path="vertx-pres.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381180903874" ignored="false" />
-    <file path="/HelloClient.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381181272762" ignored="false" />
+    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381182049390" ignored="false" />
+    <file path="/HelloClient.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381181534381" ignored="false" />
+    <file path="/WebServer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381183012773" ignored="false" />
+    <file path="/404.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381182477014" ignored="false" />
+    <file path="/index.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381183458514" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,12 +76,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HelloClient.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HelloClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HelloClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="5" selection-start="214" selection-end="214" vertical-scroll-proportion="0.22537562">
+            <state line="15" column="61" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebServer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WebServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="33" selection-start="661" selection-end="672" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#349#795#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="50" selection-start="118" selection-end="118" vertical-scroll-proportion="0.15652174">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,6 +130,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/HelloClient.java" />
+        <option value="$PROJECT_DIR$/web/404.html" />
+        <option value="$PROJECT_DIR$/web/WebServer.java" />
+        <option value="$PROJECT_DIR$/web/index.html" />
       </list>
     </option>
   </component>
@@ -174,6 +209,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vertx-pres" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vertx-pres" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -201,7 +250,9 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/vertx-pres.ipr" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -386,18 +437,52 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/vertx-platform/2.0.2-SNAPSHOT/source/e14c7ff1d255b5078ac87687a16cda2222197329/vertx-platform-2.0.2-SNAPSHOT-sources.jar!/org/vertx/java/platform/Verticle.java">
+    <entry file="file://$PROJECT_DIR$/HelloClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="629" selection-end="652" vertical-scroll-proportion="0.050083473">
+        <state line="15" column="61" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="15" selection-start="83" selection-end="83" vertical-scroll-proportion="0.15652174">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HelloClient.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/vertx-platform/2.0.2-SNAPSHOT/source/e14c7ff1d255b5078ac87687a16cda2222197329/vertx-platform-2.0.2-SNAPSHOT-sources.jar!/org/vertx/java/platform/Verticle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="214" selection-end="214" vertical-scroll-proportion="0.22537562">
+        <state line="23" column="40" selection-start="826" selection-end="834" vertical-scroll-proportion="-0.90317196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/vertx-core/2.0.2-SNAPSHOT/source/3b9c6d34fff94ff9bef69bf1c607181441699304/vertx-core-2.0.2-SNAPSHOT-sources.jar!/org/vertx/java/core/http/HttpServerResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="189" column="21" selection-start="6888" selection-end="6888" vertical-scroll-proportion="0.6416382">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WebServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="33" selection-start="661" selection-end="672" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#349#795#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="50" selection-start="118" selection-end="118" vertical-scroll-proportion="0.15652174">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
