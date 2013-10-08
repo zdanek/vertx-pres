@@ -8,7 +8,7 @@ import org.vertx.java.platform.Verticle;
 
 public class Producer extends Verticle {
 
-    private static final long PERIOD_MS = 2000L;
+    private static final long PERIOD_MS = 20L;
 
     private int counter = 0;
 

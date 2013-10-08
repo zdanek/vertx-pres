@@ -10,13 +10,14 @@ public class Consumer extends Verticle {
 
     @Override
     public void start() {
-        getContainer().logger().info("Consumer started!");
+
+        getContainer().logger().info("Consumer started! " + hashCode());
 
         vertx.eventBus().registerHandler(CONSUMER_ADDRESS, new Handler<Message<String>>() {
             @Override
             public void handle(Message<String> message) {
                 // Reply to it
-                getContainer().logger().info("Received message: " + message.body());
+                getContainer().logger().info(hashCode()+ " Received message: " + message.body());
                 message.reply("pong!");
             }
         });
