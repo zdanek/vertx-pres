@@ -2,27 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73463702-773a-434f-9087-68deed038a15" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Broadcaster.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/SleepyConsumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/run_consumer_cluster.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/run_pubsub_jvm.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java" afterPath="$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vertx-pres.iws" afterPath="$PROJECT_DIR$/vertx-pres.iws" />
     </list>
     <ignored path="vertx-pres.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381389705090" ignored="false" />
+    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381397210719" ignored="false" />
     <file path="/HelloClient.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381181534381" ignored="false" />
     <file path="/WebServer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381183012773" ignored="false" />
     <file path="/404.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381182477014" ignored="false" />
     <file path="/index.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381183458514" ignored="false" />
     <file path="/Parent.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381254273803" ignored="false" />
     <file path="/a.dummy" changelist="73463702-773a-434f-9087-68deed038a15" time="1381251922278" ignored="false" />
-    <file path="/Consumer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381391321795" ignored="false" />
-    <file path="/fragment.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381391925726" ignored="false" />
-    <file path="/Starter.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381391938008" ignored="false" />
+    <file path="/Consumer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381397358738" ignored="false" />
+    <file path="/fragment.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381397521634" ignored="false" />
+    <file path="/Starter.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381397502025" ignored="false" />
     <file path="/Producer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381391843313" ignored="false" />
     <file path="/BaseVerticle.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381390279097" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -155,17 +154,37 @@
       <file leaf-file-name="Starter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="53" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+            <state line="12" column="54" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Consumer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Consumer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.49307957">
+            <state line="26" column="0" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SleepyConsumer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/SleepyConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.28546712">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseVerticle.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="19" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/WebServer.java" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/eventbus_point2point/Sender.java" />
         <option value="$PROJECT_DIR$/eventbus_point2point/Parent.java" />
@@ -202,8 +220,9 @@
         <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Producer.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Broadcaster.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/SleepyConsumer.java" />
       </list>
     </option>
   </component>
@@ -525,7 +544,11 @@
       <created>1381389706827</created>
       <updated>1381389706827</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="eventbus publisher (broadcast) - subscriber">
+      <created>1381397215833</created>
+      <updated>1381397215833</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -600,7 +623,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added simple client without boilerplate to show event bus handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="eventbus publisher (broadcast) - subscriber" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -617,6 +640,7 @@
     <MESSAGE value="added eventbus p2p" />
     <MESSAGE value="eventbus p2p with many verticles" />
     <MESSAGE value="added simple client without boilerplate to show event bus handler" />
+    <MESSAGE value="eventbus publisher (broadcast) - subscriber" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -626,13 +650,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HelloClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="61" selection-start="401" selection-end="401" vertical-scroll-proportion="0.18728717">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/vertx-core/2.0.2-SNAPSHOT/source/3b9c6d34fff94ff9bef69bf1c607181441699304/vertx-core-2.0.2-SNAPSHOT-sources.jar!/org/vertx/java/core/logging/Logger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -676,15 +693,6 @@
           <folding>
             <element signature="e#425#647#0" expanded="true" />
             <element signature="e#636#637#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="14" selection-start="430" selection-end="430" vertical-scroll-proportion="0.46712804">
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -745,16 +753,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="53" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="22" column="19" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.49307957">
+        <state line="26" column="0" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="54" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/SleepyConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.28546712">
           <folding />
         </state>
       </provider>

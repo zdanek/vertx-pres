@@ -9,7 +9,7 @@ public class Starter extends Verticle {
     @Override
     public void start() {
         container.deployVerticle("eventbus_pubsub/Broadcaster.java");
-//        container.deployVerticle("eventbus_pubsub/Consumer.java");
-        container.deployVerticle("eventbus_pubsub/Consumer.java", 3);
+        container.deployVerticle("eventbus_pubsub/Consumer.java");
+        container.deployVerticle("eventbus_pubsub/SleepyConsumer.java");
     }
 }

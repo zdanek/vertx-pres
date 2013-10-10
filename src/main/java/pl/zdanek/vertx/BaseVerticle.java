@@ -19,4 +19,13 @@ public abstract class BaseVerticle extends Verticle {
     protected void sout(String mesg) {
         System.out.println(mesg);
     }
+
+    protected void sleep(Long sleepTimeMs) {
+        try {
+            Thread.sleep(sleepTimeMs);
+        } catch (InterruptedException e) {
+            getLogger().error("Error sleeping", e);
+        }
+
+    }
 }
