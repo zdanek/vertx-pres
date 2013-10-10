@@ -4,13 +4,19 @@ import org.vertx.java.core.Handler;
 import org.vertx.java.core.eventbus.Message;
 import org.vertx.java.core.logging.Logger;
 import org.vertx.java.platform.Verticle;
+import pl.zdanek.vertx.BaseVerticle;
 
 
-public class Producer extends Verticle {
+public class Producer extends BaseVerticle {
 
     private static final long PERIOD_MS = 1000L;
 
     private int counter = 0;
+
+    public Producer() {
+        sout("Producer");
+        sout(this.getClass().getClassLoader().toString());
+    }
 
     @Override
     public void start() {
@@ -21,13 +27,14 @@ public class Producer extends Verticle {
 
             @Override
             public void handle(Long timerID) {
-                getLogger().info("Sending message " + counter);
+                getLogger().info(verticleId() + " Sending message " + counter);
 
-                vertx.eventBus().send(Consumer.CONSUMER_ADDRESS, "Message " + counter, new Handler<Message<String>>() {
+                vertx.eventBus().send(Consumer.CONSUMER_ADDRESS,
+                        "Message " + counter, new Handler<Message<String>>() {
 
                     @Override
                     public void handle(Message<String> reply) {
-                        System.out.println("Received reply: " + reply.body());
+                        sout("Received reply: " + reply.body());
                     }
                 });
                 counter++;
@@ -35,7 +42,4 @@ public class Producer extends Verticle {
         });
     }
 
-    private Logger getLogger() {
-        return getContainer().logger();
-    }
 }

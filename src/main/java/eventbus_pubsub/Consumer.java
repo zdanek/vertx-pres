@@ -1,4 +1,4 @@
-package eventbus_p2p;
+package eventbus_pubsub;
 
 import org.vertx.java.core.Handler;
 import org.vertx.java.core.eventbus.Message;
@@ -22,9 +22,8 @@ public class Consumer extends BaseVerticle {
         vertx.eventBus().registerHandler(CONSUMER_ADDRESS, new Handler<Message<String>>() {
             @Override
             public void handle(Message<String> message) {
-                // Reply to it
+
                 getLogger().info(verticleId() + " Received message: " + message.body());
-//                message.reply("Got it!");
             }
         });
     }

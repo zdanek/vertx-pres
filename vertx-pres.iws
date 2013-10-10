@@ -2,26 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73463702-773a-434f-9087-68deed038a15" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eventbus_p2p/ConsumerSimple.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Broadcaster.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/run_producter_cluster.sh" afterPath="$PROJECT_DIR$/src/main/java/run_producter_cluster.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vertx-pres.iws" afterPath="$PROJECT_DIR$/vertx-pres.iws" />
     </list>
     <ignored path="vertx-pres.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381339534159" ignored="false" />
+    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381389705090" ignored="false" />
     <file path="/HelloClient.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381181534381" ignored="false" />
     <file path="/WebServer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381183012773" ignored="false" />
     <file path="/404.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381182477014" ignored="false" />
     <file path="/index.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381183458514" ignored="false" />
     <file path="/Parent.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381254273803" ignored="false" />
     <file path="/a.dummy" changelist="73463702-773a-434f-9087-68deed038a15" time="1381251922278" ignored="false" />
-    <file path="/Consumer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381340718919" ignored="false" />
-    <file path="/fragment.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381341118191" ignored="false" />
-    <file path="/Starter.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381340932535" ignored="false" />
-    <file path="/Producer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381254274674" ignored="false" />
+    <file path="/Consumer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381391321795" ignored="false" />
+    <file path="/fragment.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381391925726" ignored="false" />
+    <file path="/Starter.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381391938008" ignored="false" />
+    <file path="/Producer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381391843313" ignored="false" />
+    <file path="/BaseVerticle.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381390279097" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,10 +88,11 @@
       <file leaf-file-name="Consumer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="52" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0">
+            <state line="14" column="5" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#733#1044#0" expanded="true" />
-                <element signature="e#1033#1034#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#621#921#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,28 +130,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Starter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Starter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.39933443">
+            <state line="12" column="60" selection-start="338" selection-end="364" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Producer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java">
+      <file leaf-file-name="Broadcaster.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Broadcaster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="46" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+            <state line="28" column="0" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#555#898#0" expanded="true" />
+                <element signature="e#887#888#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Starter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="53" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Receiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eventbus_pub_sub/Receiver.java">
+      <file leaf-file-name="Consumer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="24" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.49307957">
               <folding />
             </state>
           </provider>
@@ -171,8 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/HelloClient.java" />
-        <option value="$PROJECT_DIR$/web/404.html" />
         <option value="$PROJECT_DIR$/web/WebServer.java" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/eventbus_point2point/Sender.java" />
@@ -180,10 +195,15 @@
         <option value="$PROJECT_DIR$/eventbus_point2point/Producer.java" />
         <option value="$PROJECT_DIR$/eventbus_point2point/Consumer.java" />
         <option value="$PROJECT_DIR$/eventbus_point2point/eventbus_p2p/Consumer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/ConsumerSimple.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Producer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Broadcaster.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java" />
       </list>
     </option>
   </component>
@@ -197,7 +217,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="-4" />
-    <option name="width" value="1368" />
+    <option name="width" value="1026" />
     <option name="height" value="773" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -298,6 +318,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vertx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vertx-pres" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vertx-pres" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventbus_pubsub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vertx-pres" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vertx-pres" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="eventbus_p2p" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -343,9 +415,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="eventbus_pubsub" />
       <recent name="eventbus_p2p" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/eventbus_pubsub" />
       <recent name="$PROJECT_DIR$/eventbus_pub_sub" />
       <recent name="$PROJECT_DIR$/eventbus_point2point" />
     </key>
@@ -447,17 +521,22 @@
       <created>1381255104158</created>
       <updated>1381255104158</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added simple client without boilerplate to show event bus handler">
+      <created>1381389706827</created>
+      <updated>1381389706827</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <frame x="-1" y="-4" width="1026" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="99" y="96" width="1168" height="573" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -466,15 +545,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6703418" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6704" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -522,7 +600,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="eventbus p2p with many verticles" />
+    <option name="LAST_COMMIT_MESSAGE" value="added simple client without boilerplate to show event bus handler" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -538,44 +616,19 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="added eventbus p2p" />
     <MESSAGE value="eventbus p2p with many verticles" />
+    <MESSAGE value="added simple client without boilerplate to show event bus handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="15" selection-start="83" selection-end="83" vertical-scroll-proportion="0.15652174" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/vertx-platform/2.0.2-SNAPSHOT/source/e14c7ff1d255b5078ac87687a16cda2222197329/vertx-platform-2.0.2-SNAPSHOT-sources.jar!/org/vertx/java/platform/Verticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="40" selection-start="826" selection-end="834" vertical-scroll-proportion="-0.90317196" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/vertx-core/2.0.2-SNAPSHOT/source/3b9c6d34fff94ff9bef69bf1c607181441699304/vertx-core-2.0.2-SNAPSHOT-sources.jar!/org/vertx/java/core/http/HttpServerResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="21" selection-start="6888" selection-end="6888" vertical-scroll-proportion="0.6416382" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="200" selection-end="200" vertical-scroll-proportion="0.15752625" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WebServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="661" selection-end="672" vertical-scroll-proportion="0.2553916" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HelloClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="61" selection-start="401" selection-end="401" vertical-scroll-proportion="0.18728717" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eventbus_pub_sub/Receiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="15" column="61" selection-start="401" selection-end="401" vertical-scroll-proportion="0.18728717">
           <folding />
         </state>
       </provider>
@@ -610,27 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="46" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="236" column="75" selection-start="10226" selection-end="10257" vertical-scroll-proportion="0.3577371">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="52" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#733#1044#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,9 +680,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="14" selection-start="430" selection-end="430" vertical-scroll-proportion="0.46712804">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="25" selection-start="402" selection-end="402" vertical-scroll-proportion="0.6279864">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#594#1163#0" expanded="true" />
+            <element signature="e#878#1110#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#621#921#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventbus_pub_sub/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="779" selection-end="779" vertical-scroll-proportion="0.53097343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventbus_pub_sub/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="838" selection-end="838" vertical-scroll-proportion="0.5575221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.39933443">
+        <state line="12" column="60" selection-start="338" selection-end="364" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Broadcaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#555#898#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="53" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.49307957">
           <folding />
         </state>
       </provider>
