@@ -7,9 +7,18 @@ import org.vertx.java.platform.Verticle;
 public class Consumer extends Verticle {
 
     public static final String CONSUMER_ADDRESS = "consumer.address";
+    private static int workerCnt = 0;
+    private int workerNum = -1;
+
+    public Consumer() {
+        System.out.println("Consum");
+        System.out.println(this.getClass().getClassLoader().toString());
+        workerNum = getWorkerUniqueNum();
+    }
 
     @Override
     public void start() {
+        System.out.println(vertx.hashCode());
 
         getContainer().logger().info("Consumer started! " + hashCode());
 
@@ -17,9 +26,22 @@ public class Consumer extends Verticle {
             @Override
             public void handle(Message<String> message) {
                 // Reply to it
-                getContainer().logger().info(hashCode()+ " Received message: " + message.body());
-                message.reply("pong!");
+                getContainer().logger().info(verticleId()+ " Received message: " + message.body());
+//                message.reply("Got it!");
             }
         });
     }
+
+    private String verticleId() {
+        return ">" + Integer.toHexString(hashCode()) + " [" + Thread.currentThread().getName() + "]";
+    }
+
+    private static int getWorkerUniqueNum() {
+        synchronized (Consumer.class) {
+            workerCnt++;
+            return workerCnt;
+        }
+    }
+
+
 }

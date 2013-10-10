@@ -9,6 +9,8 @@ public class Starter extends Verticle {
     @Override
     public void start() {
         container.deployVerticle("eventbus_p2p/Producer.java");
-        container.deployVerticle("eventbus_p2p/Consumer.java", 5);
+        container.deployVerticle("eventbus_p2p/ConsumerSimple.java");
+//        container.deployVerticle("eventbus_p2p/Consumer.java", 9);
+//        container.deployWorkerVerticle("eventbus_p2p/Consumer.java");
     }
 }
