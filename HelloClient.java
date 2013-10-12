@@ -11,8 +11,8 @@ public class HelloClient extends Verticle {
         getContainer().logger().info("Hello vert.x");
     }
 
-    @Override
+/*    @Override
     public void start(Future<Void> startedResult) {
         getContainer().logger().info(startedResult.complete());
-    }
+    }*/
 }
