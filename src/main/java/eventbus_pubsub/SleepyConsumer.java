@@ -23,8 +23,7 @@ public class SleepyConsumer extends BaseVerticle {
             @Override
             public void handle(Message<String> message) {
 
-                getLogger().info(verticleId() + " Received message: " + message.body());
-                getLogger().info("Sleeping " + SLEEP_TIME_MS);
+                getLogger().info(verticleId() + "Received message: " + message.body());
                 sleep(SLEEP_TIME_MS);
             }
         });

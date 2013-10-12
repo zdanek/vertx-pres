@@ -13,7 +13,7 @@ public abstract class BaseVerticle extends Verticle {
     }
 
     protected String verticleId() {
-        return ">" + Integer.toHexString(hashCode()) + " [" + Thread.currentThread().getName() + "]";
+        return ">" + Integer.toHexString(hashCode()) + " [" + Thread.currentThread().getName() + "] ";
     }
 
     protected void sout(String mesg) {
@@ -21,6 +21,7 @@ public abstract class BaseVerticle extends Verticle {
     }
 
     protected void sleep(Long sleepTimeMs) {
+        getLogger().info(verticleId() + "Sleeping " + sleepTimeMs);
         try {
             Thread.sleep(sleepTimeMs);
         } catch (InterruptedException e) {
