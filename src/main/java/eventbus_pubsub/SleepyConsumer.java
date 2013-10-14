@@ -7,7 +7,7 @@ import pl.zdanek.vertx.BaseVerticle;
 public class SleepyConsumer extends BaseVerticle {
 
     public static final String CONSUMER_ADDRESS = "consumer.address";
-    private static final Long SLEEP_TIME_MS = 5000L;
+    private static final Long SLEEP_TIME_MS = 2000L;
 
     public SleepyConsumer() {
         sout("SleepyConsumer");

@@ -5,12 +5,10 @@ import org.vertx.java.core.http.HttpServer;
 import org.vertx.java.core.http.HttpServerRequest;
 import org.vertx.java.core.json.JsonArray;
 import org.vertx.java.core.json.JsonObject;
-import org.vertx.java.core.sockjs.SockJSServer;
 import org.vertx.java.platform.Verticle;
+import pl.zdanek.vertx.BaseVerticle;
 
-import java.lang.Override;
-
-public class WebWithEB extends Verticle {
+public class WebWithEB extends BaseVerticle {
 
     private final static String ROOT = "web";
 
@@ -38,11 +36,20 @@ public class WebWithEB extends Verticle {
 
         server.listen(8080);
 
+        vertx.setPeriodic(1000L, new Handler<Long>() {
+
+            @Override
+            public void handle(Long timerID) {
+
+                vertx.eventBus().publish("web.client", "Message 1" );
+            }
+        });
+
         getContainer().logger().info("Server ready!");
     }
 
     private void createEventBusToJSBridge(HttpServer server) {
         JsonObject config = new JsonObject().putString("prefix", "/eventbus");
-        vertx.createSockJSServer(server).bridge(config, new JsonArray(), new JsonArray());
+        vertx.createSockJSServer(server).bridge(config, new JsonArray(), new JsonArray().add(new JsonObject().putString("address", "web.client")));
     }
 }

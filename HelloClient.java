@@ -9,6 +9,7 @@ public class HelloClient extends Verticle {
     @Override
     public void start() {
         getContainer().logger().info("Hello vert.x");
+
     }
 
 /*    @Override

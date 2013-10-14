@@ -1,26 +1,21 @@
-package eventbus_p2p;
+package first;
 
 import org.vertx.java.core.Handler;
 import org.vertx.java.core.eventbus.Message;
-import pl.zdanek.vertx.BaseVerticle;
+import org.vertx.java.platform.Verticle;
 
-public class Consumer extends BaseVerticle {
+public class Consumer extends Verticle {
 
     public static final String CONSUMER_ADDRESS = "consumer.address";
 
-    public Consumer() {
-        sout("Consumer");
-        sout(this.getClass().getClassLoader().toString());
-    }
-
     @Override
     public void start() {
-        getLogger().info("Consumer started! " + hexHashCode());
+        getContainer().logger().info("Consumer started! ");
 
         vertx.eventBus().registerHandler(CONSUMER_ADDRESS, new Handler<Message<String>>() {
             @Override
             public void handle(Message<String> message) {
-                getLogger().info(verticleId() + " Received message: " + message.body());
+                getContainer().logger().info(" Received message: " + message.body());
             }
         });
     }

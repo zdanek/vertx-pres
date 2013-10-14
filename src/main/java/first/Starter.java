@@ -1,4 +1,4 @@
-package eventbus_p2p;
+package first;
 
 import org.vertx.java.platform.Verticle;
 
@@ -8,7 +8,7 @@ import org.vertx.java.platform.Verticle;
 public class Starter extends Verticle {
     @Override
     public void start() {
-        container.deployVerticle("eventbus_p2p/Producer.java");
-        container.deployVerticle("eventbus_p2p/Consumer.java", 3);
+        container.deployVerticle("first/Producer.java");
+        container.deployVerticle("first/Consumer.java");
     }
 }

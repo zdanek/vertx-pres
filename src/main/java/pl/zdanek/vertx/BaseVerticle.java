@@ -13,7 +13,7 @@ public abstract class BaseVerticle extends Verticle {
     }
 
     protected String verticleId() {
-        return ">" + Integer.toHexString(hashCode()) + " [" + Thread.currentThread().getName() + "] ";
+        return ">" + hexHashCode() + " [" + Thread.currentThread().getName() + "] ";
     }
 
     protected void sout(String mesg) {
@@ -29,4 +29,9 @@ public abstract class BaseVerticle extends Verticle {
         }
 
     }
+
+    protected String hexHashCode() {
+        return Integer.toHexString(hashCode());
+    }
+
 }
