@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73463702-773a-434f-9087-68deed038a15" name="Default" comment="">
+    <list default="true" id="73463702-773a-434f-9087-68deed038a15" name="Default" comment="last snapshot before pres">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/setThreads.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/first/Producer.java" afterPath="$PROJECT_DIR$/src/main/java/first/Producer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/first/Starter.java" afterPath="$PROJECT_DIR$/src/main/java/first/Starter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vertx-pres.iws" afterPath="$PROJECT_DIR$/vertx-pres.iws" />
     </list>
     <ignored path="vertx-pres.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381791067151" ignored="false" />
+    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381851081432" ignored="false" />
     <file path="/HelloClient.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381565630292" ignored="false" />
     <file path="/WebServer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381183012773" ignored="false" />
     <file path="/404.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381182477014" ignored="false" />
@@ -18,7 +18,7 @@
     <file path="/Consumer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381791014037" ignored="false" />
     <file path="/fragment.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381539621443" ignored="false" />
     <file path="/Starter.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381568262021" ignored="false" />
-    <file path="/Producer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381818081956" ignored="false" />
+    <file path="/Producer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381821791145" ignored="false" />
     <file path="/BaseVerticle.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381789506745" ignored="false" />
     <file path="/WebWithEB.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381572336503" ignored="false" />
     <file path="/eventbus.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381546680661" ignored="false" />
@@ -90,43 +90,7 @@
     <favorites_list name="vertx-pres" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Consumer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/first/Consumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="81" selection-start="540" selection-end="606" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#412#634#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Producer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/first/Producer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.4657763">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#354#689#0" expanded="true" />
-                <element signature="e#678#679#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Starter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/first/Starter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="42" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -151,7 +115,6 @@
         <option value="$PROJECT_DIR$/src/main/java/first/eventbus_p2p/Starter.java" />
         <option value="$PROJECT_DIR$/src/main/java/first/eventbus_p2p/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/first/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java" />
@@ -160,6 +123,7 @@
         <option value="$PROJECT_DIR$/src/main/java/shared_data_safe/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/first/Starter.java" />
         <option value="$PROJECT_DIR$/src/main/java/first/Producer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/first/Consumer.java" />
       </list>
     </option>
   </component>
@@ -171,10 +135,9 @@
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="-4" />
-    <option name="width" value="1368" />
-    <option name="height" value="773" />
+    <option name="y" value="24" />
+    <option name="width" value="1366" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -529,7 +492,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -550,8 +522,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -691,17 +663,20 @@
       <created>1381791092344</created>
       <updated>1381791092344</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="last snapshot before pres">
+      <created>1381818923575</created>
+      <updated>1381818923575</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -710,15 +685,16 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20757575" sideWeight="0.672" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2811861" sideWeight="0.672" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="99" y="96" width="1168" height="573" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -766,7 +742,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="some fixes&#10;+safe shared data" />
+    <option name="LAST_COMMIT_MESSAGE" value="last snapshot before pres" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -788,6 +764,7 @@
     <MESSAGE value="shared data&#10;" />
     <MESSAGE value="eventbus with json" />
     <MESSAGE value="some fixes&#10;+safe shared data" />
+    <MESSAGE value="last snapshot before pres" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -797,131 +774,101 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/vertx-core/2.0.2-SNAPSHOT/source/3b9c6d34fff94ff9bef69bf1c607181441699304/vertx-core-2.0.2-SNAPSHOT-sources.jar!/org/vertx/java/core/eventbus/Message.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/SleepyConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="17" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.32554257">
+        <state line="32" column="0" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.7266436" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/DataRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="56" selection-start="613" selection-end="749" vertical-scroll-proportion="0.6010017" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="-0.025041737" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="59" selection-start="470" selection-end="474" vertical-scroll-proportion="0.42570952" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="47" selection-start="215" selection-end="215" vertical-scroll-proportion="0.25041735" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="37" selection-start="800" selection-end="804" vertical-scroll-proportion="0.6010017" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="34" selection-start="1370" selection-end="1373" vertical-scroll-proportion="0.7849829">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="341" selection-end="341" vertical-scroll-proportion="0.37562606">
+        <state line="14" column="21" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="58" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="61" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/SleepyConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="59" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.7266436">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/DataRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="56" selection-start="613" selection-end="749" vertical-scroll-proportion="0.6010017">
-          <folding>
-            <element signature="e#413#562#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="-0.025041737">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="48" selection-start="278" selection-end="278" vertical-scroll-proportion="0.2754591">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="36" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.74958265">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="754" selection-end="754" vertical-scroll-proportion="0.5759599">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#539#764#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="101" selection-end="101" vertical-scroll-proportion="0.17529215">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/first/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="81" selection-start="540" selection-end="606" vertical-scroll-proportion="0.0">
+        <state line="18" column="13" selection-start="632" selection-end="632" vertical-scroll-proportion="0.7372014" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="55" selection-start="226" selection-end="226" vertical-scroll-proportion="0.25041735" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Broadcaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="37" selection-start="684" selection-end="684" vertical-scroll-proportion="0.6279864" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/first/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="44" selection-start="490" selection-end="490" vertical-scroll-proportion="0.62457335">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#412#634#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#354#686#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/first/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="42" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="9" column="25" selection-start="160" selection-end="160" vertical-scroll-proportion="0.33788395" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="294" selection-end="294" vertical-scroll-proportion="0.30594406">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/first/Producer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.4657763">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#354#689#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-          </folding>
+        <state line="14" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.36713287">
+          <folding />
         </state>
       </provider>
     </entry>
