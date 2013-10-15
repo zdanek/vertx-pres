@@ -9,6 +9,6 @@ public class Starter extends Verticle {
     @Override
     public void start() {
         container.deployVerticle("first/Producer.java");
-        container.deployVerticle("first/Consumer.java");
+        container.deployVerticle("first/Consumer.java", 4);
     }
 }

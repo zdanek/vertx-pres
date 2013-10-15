@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73463702-773a-434f-9087-68deed038a15" name="Default" comment="eventbus with json">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/first/Consumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/shared_data_safe/Consumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/shared_data_safe/DataRepo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/first/Producer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/shared_data_safe/Producer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/first/Starter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/shared_data_safe/Starter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/web/js/jquery-1.9.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/web/js/sockjs-0.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/web/js/vertxbus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java" afterPath="$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HelloClient.java" afterPath="$PROJECT_DIR$/HelloClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/SleepyConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/SleepyConsumer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" afterPath="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/WebWithEB.java" afterPath="$PROJECT_DIR$/src/main/java/web/WebWithEB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/eventbus.html" afterPath="$PROJECT_DIR$/src/main/java/web/eventbus.html" />
+    <list default="true" id="73463702-773a-434f-9087-68deed038a15" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/first/Producer.java" afterPath="$PROJECT_DIR$/src/main/java/first/Producer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/first/Starter.java" afterPath="$PROJECT_DIR$/src/main/java/first/Starter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vertx-pres.iws" afterPath="$PROJECT_DIR$/vertx-pres.iws" />
     </list>
     <ignored path="vertx-pres.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381791039904" ignored="false" />
+    <file path="/Dummy.txt" changelist="73463702-773a-434f-9087-68deed038a15" time="1381791067151" ignored="false" />
     <file path="/HelloClient.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381565630292" ignored="false" />
     <file path="/WebServer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381183012773" ignored="false" />
     <file path="/404.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381182477014" ignored="false" />
@@ -34,7 +18,7 @@
     <file path="/Consumer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381791014037" ignored="false" />
     <file path="/fragment.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381539621443" ignored="false" />
     <file path="/Starter.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381568262021" ignored="false" />
-    <file path="/Producer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381783987434" ignored="false" />
+    <file path="/Producer.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381818081956" ignored="false" />
     <file path="/BaseVerticle.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381789506745" ignored="false" />
     <file path="/WebWithEB.java" changelist="73463702-773a-434f-9087-68deed038a15" time="1381572336503" ignored="false" />
     <file path="/eventbus.html" changelist="73463702-773a-434f-9087-68deed038a15" time="1381546680661" ignored="false" />
@@ -108,96 +92,35 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Consumer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/first/Consumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="13" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
+            <state line="17" column="81" selection-start="540" selection-end="606" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#539#764#0" expanded="true" />
+                <element signature="e#412#634#0" expanded="true" />
+                <element signature="e#623#624#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Starter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java">
+      <file leaf-file-name="Producer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/first/Producer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="61" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SleepyConsumer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_pubsub/SleepyConsumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Consumer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Consumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="59" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataRepo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/DataRepo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="56" selection-start="613" selection-end="749" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.4657763">
               <folding>
-                <element signature="e#413#562#0" expanded="true" />
-                <element signature="e#551#552#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#354#689#0" expanded="true" />
+                <element signature="e#678#679#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Consumer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Consumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.7266436">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Producer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Producer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Starter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Starter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/first/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="48" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Producer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Producer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="36" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Starter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="50" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+            <state line="10" column="42" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -228,15 +151,15 @@
         <option value="$PROJECT_DIR$/src/main/java/first/eventbus_p2p/Starter.java" />
         <option value="$PROJECT_DIR$/src/main/java/first/eventbus_p2p/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/first/Starter.java" />
         <option value="$PROJECT_DIR$/src/main/java/first/Consumer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/first/Producer.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/zdanek/vertx/BaseVerticle.java" />
         <option value="$PROJECT_DIR$/src/main/java/eventbus_pubsub/Starter.java" />
         <option value="$PROJECT_DIR$/src/main/java/shared_data_safe/DataRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/shared_data_safe/Consumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/first/Starter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/first/Producer.java" />
       </list>
     </option>
   </component>
@@ -764,7 +687,11 @@
       <created>1381545395119</created>
       <updated>1381545395119</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="some fixes&#10;+safe shared data">
+      <created>1381791092344</created>
+      <updated>1381791092344</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -839,7 +766,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="eventbus with json" />
+    <option name="LAST_COMMIT_MESSAGE" value="some fixes&#10;+safe shared data" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -860,6 +787,7 @@
     <MESSAGE value="eventbus publisher (broadcast) - subscriber&#10;added SleepyCosumer to show blocking of Thread and delivering all waiting events" />
     <MESSAGE value="shared data&#10;" />
     <MESSAGE value="eventbus with json" />
+    <MESSAGE value="some fixes&#10;+safe shared data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -869,28 +797,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_json/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="250" selection-end="404" vertical-scroll-proportion="0.6010017">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/vertx-core/2.0.2-SNAPSHOT/source/3b9c6d34fff94ff9bef69bf1c607181441699304/vertx-core-2.0.2-SNAPSHOT-sources.jar!/org/vertx/java/core/eventbus/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="17" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.32554257">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/first/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="31" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#412#634#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -903,38 +813,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/first/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="37" selection-start="561" selection-end="561" vertical-scroll-proportion="0.57929885">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#354#686#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Producer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="58" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="50" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#539#764#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -952,20 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="36" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="48" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="59" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
@@ -973,16 +841,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Producer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+        <state line="35" column="0" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.7266436">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/DataRepo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="56" selection-start="613" selection-end="749" vertical-scroll-proportion="0.0">
+        <state line="28" column="56" selection-start="613" selection-end="749" vertical-scroll-proportion="0.6010017">
           <folding>
             <element signature="e#413#562#0" expanded="true" />
             <element signature="e#551#552#0" expanded="true" />
@@ -990,10 +858,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Consumer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data_safe/Producer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.7266436">
+        <state line="9" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="-0.025041737">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="48" selection-start="278" selection-end="278" vertical-scroll-proportion="0.2754591">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shared_data/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="36" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.74958265">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="754" selection-end="754" vertical-scroll-proportion="0.5759599">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#539#764#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eventbus_p2p/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="101" selection-end="101" vertical-scroll-proportion="0.17529215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/first/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="81" selection-start="540" selection-end="606" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#412#634#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/first/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="42" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/first/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.4657763">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#354#689#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

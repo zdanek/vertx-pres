@@ -21,7 +21,7 @@ public class Producer extends Verticle {
             public void handle(Long timerID) {
                 getContainer().logger().info(" Sending message " + counter);
 
-                vertx.eventBus().send(Consumer.CONSUMER_ADDRESS,
+                vertx.eventBus().publish(Consumer.CONSUMER_ADDRESS,
                         "Message " + counter);
                 counter++;
             }
