@@ -1,0 +1,11 @@
+* hello
+* publish
+* eventbus_pubsub: run_pubsub_jvm.sh
+* eventbus_p4p: run_pub_cons_jvm.sh
+* web:
+  -WebServer
+  +AnotherPublisher
+
+setThreads
+* eventbus_pubsub: run_pubsub_jvm.sh
+* eventbus_p4p: run_pub_cons_jvm.sh

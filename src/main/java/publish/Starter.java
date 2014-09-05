@@ -1,4 +1,4 @@
-package first;
+package publish;
 
 import org.vertx.java.platform.Verticle;
 
@@ -8,7 +8,7 @@ import org.vertx.java.platform.Verticle;
 public class Starter extends Verticle {
     @Override
     public void start() {
-        container.deployVerticle("first/Producer.java");
-        container.deployVerticle("first/Consumer.java", 4);
+        container.deployVerticle("publish/Producer.java");
+        container.deployVerticle("publish/Consumer.java", 4);
     }
 }

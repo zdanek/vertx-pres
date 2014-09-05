@@ -1,4 +1,4 @@
-package zero;
+package hello;
 
 import org.vertx.java.platform.Verticle;
 
