@@ -14,9 +14,9 @@
 
             eb.onopen = function() {
                 console.log('EB open')
-                eb.registerHandler('consumer.address', function(messageFromPublisher) {
-
-                    alert(messageFromPublisher)
+                eb.registerHandler('web.client', function(messageFromPublisher) {
+                    console.log('Message from backed: ' + messageFromPublisher);
+                    $('div#messages').append(messageFromPublisher + "<br />")
                 })
             }
         })
@@ -27,6 +27,7 @@
 <body>
 <div style="font-size: 30px; color: blueviolet">Vert.x EventBus on Client side!</div>
 <img src="vertx-logo.png" />
+<div id="messages" style="font-size: 20px; color: brown">Here come the news!<br /></div>
 
 </body>
 </html>

@@ -5,7 +5,6 @@ import org.vertx.java.core.http.HttpServer;
 import org.vertx.java.core.http.HttpServerRequest;
 import org.vertx.java.core.json.JsonArray;
 import org.vertx.java.core.json.JsonObject;
-import org.vertx.java.platform.Verticle;
 import pl.zdanek.vertx.BaseVerticle;
 
 public class WebWithEB extends BaseVerticle {
@@ -36,12 +35,13 @@ public class WebWithEB extends BaseVerticle {
 
         server.listen(8080);
 
-        vertx.setPeriodic(1000L, new Handler<Long>() {
+        vertx.setPeriodic(4000L, new Handler<Long>() {
 
             @Override
             public void handle(Long timerID) {
 
-                vertx.eventBus().publish("web.client", "Message 1" );
+                getContainer().logger().info("Sending message to web client");
+                vertx.eventBus().publish("web.client", "Message from backend!" );
             }
         });
 
