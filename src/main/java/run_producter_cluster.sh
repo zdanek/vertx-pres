@@ -1,1 +1,1 @@
-vertx run eventbus_p2p/Producer.java -cluster
+vertx run eventbus_p2p/Producer.java -cluster -Dproducer
