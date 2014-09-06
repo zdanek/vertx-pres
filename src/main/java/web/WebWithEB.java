@@ -24,7 +24,7 @@ public class WebWithEB extends BaseVerticle {
                 getContainer().logger().info("Got request " + request.path());
                 String path = request.path();
                 if ("/".equals(path)) {
-                    path = "/index.html";
+                    path = "/eventbus.html";
                 }
 
                 request.response().sendFile(ROOT + path, ROOT + "/404.html");

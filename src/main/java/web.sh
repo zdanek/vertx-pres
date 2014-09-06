@@ -1,1 +1,1 @@
-vertx run web/WebServer.java 
+vertx run web/WebServer.java -cluster 
