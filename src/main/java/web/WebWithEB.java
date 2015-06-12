@@ -1,10 +1,10 @@
 package web;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.http.HttpServer;
-import org.vertx.java.core.http.HttpServerRequest;
-import org.vertx.java.core.json.JsonArray;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.Handler;
+import io.vertx.core.http.HttpServer;
+import io.vertx.core.http.HttpServerRequest;
+import io.vertx.core.json.JsonObject;
+import io.vertx.core.logging.LoggerFactory;
 import pl.zdanek.vertx.BaseVerticle;
 
 public class WebWithEB extends BaseVerticle {
@@ -21,13 +21,13 @@ public class WebWithEB extends BaseVerticle {
             @Override
             public void handle(HttpServerRequest request) {
 
-                getContainer().logger().info("Got request " + request.path());
+                LoggerFactory.getLogger(getClass()).info("Got request " + request.path());
                 String path = request.path();
                 if ("/".equals(path)) {
                     path = "/eventbus.html";
                 }
 
-                request.response().sendFile(ROOT + path, ROOT + "/404.html");
+                request.response().sendFile(ROOT + path);
             }
         });
 
@@ -40,16 +40,17 @@ public class WebWithEB extends BaseVerticle {
             @Override
             public void handle(Long timerID) {
 
-                getContainer().logger().info("Sending message to web client");
+                LoggerFactory.getLogger(getClass()).info("Sending message to web client");
                 vertx.eventBus().publish("web.client", "Message from backend!" );
             }
         });
 
-        getContainer().logger().info("Server ready!");
+        LoggerFactory.getLogger(getClass()).info("Server ready!");
     }
 
     private void createEventBusToJSBridge(HttpServer server) {
-        JsonObject config = new JsonObject().putString("prefix", "/eventbus");
-        vertx.createSockJSServer(server).bridge(config, new JsonArray(), new JsonArray().add(new JsonObject().putString("address", "web.client")));
+        JsonObject config = new JsonObject().put("prefix", "/eventbus");
+//        TODO fix here
+//        vertx.createSockJSServer(server).bridge(config, new JsonArray(), new JsonArray().add(new JsonObject().put("address", "web.client")));
     }
 }

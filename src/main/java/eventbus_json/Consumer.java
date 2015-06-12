@@ -1,9 +1,8 @@
 package eventbus_json;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.eventbus.Message;
-import org.vertx.java.core.json.JsonObject;
-import org.vertx.java.core.json.impl.Json;
+import io.vertx.core.Handler;
+import io.vertx.core.eventbus.Message;
+import io.vertx.core.json.Json;
 import pl.zdanek.vertx.BaseVerticle;
 
 public class Consumer extends BaseVerticle {
@@ -14,13 +13,14 @@ public class Consumer extends BaseVerticle {
     public void start() {
         getLogger().info("Consumer started! " + hashCode());
 
-        vertx.eventBus().registerHandler(CONSUMER_ADDRESS, new Handler<Message<String>>() {
-            @Override
-            public void handle(Message<String> message) {
-                Data data = Json.decodeValue(message.body(), Data.class);
-                getLogger().info(verticleId() + " Received message: " + message.body() + " -> " + data);
-            }
-        });
+        vertx.eventBus().consumer(
+            CONSUMER_ADDRESS, new Handler<Message<String>>() {
+                @Override
+                public void handle(Message<String> message) {
+                    Data data = Json.decodeValue(message.body(), Data.class);
+                    getLogger().info(verticleId() + " Received message: " + message.body() + " -> " + data);
+                }
+            });
     }
 
 }

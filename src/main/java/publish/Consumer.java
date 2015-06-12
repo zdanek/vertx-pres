@@ -1,21 +1,22 @@
 package publish;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.eventbus.Message;
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.Handler;
+import io.vertx.core.eventbus.Message;
+import io.vertx.core.logging.LoggerFactory;
 
-public class Consumer extends Verticle {
+public class Consumer extends AbstractVerticle {
 
     public static final String CONSUMER_ADDRESS = "consumer.address";
 
     @Override
     public void start() {
-        getContainer().logger().info("Consumer started! ");
+        LoggerFactory.getLogger(getClass()).info("Consumer started! ");
 
-        vertx.eventBus().registerHandler(CONSUMER_ADDRESS, new Handler<Message<String>>() {
+        vertx.eventBus().consumer(CONSUMER_ADDRESS, new Handler<Message<String>>() {
             @Override
             public void handle(Message<String> message) {
-                getContainer().logger().info(" Received message: " + message.body());
+                LoggerFactory.getLogger(getClass()).info(" Received message: " + message.body());
             }
         });
     }

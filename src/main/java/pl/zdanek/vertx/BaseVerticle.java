@@ -1,15 +1,16 @@
 package pl.zdanek.vertx;
 
-import org.vertx.java.core.logging.Logger;
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.logging.Logger;
+import io.vertx.core.logging.LoggerFactory;
 
 /**
  * @author bzd
  */
-public abstract class BaseVerticle extends Verticle {
+public abstract class BaseVerticle extends AbstractVerticle {
 
     protected Logger getLogger() {
-        return getContainer().logger();
+        return LoggerFactory.getLogger(getClass());
     }
 
     protected String verticleId() {

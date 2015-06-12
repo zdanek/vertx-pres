@@ -1,15 +1,16 @@
 package shared_data_safe;
 
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.DeploymentOptions;
 
 /**
  * @author bzd
  */
-public class Starter extends Verticle {
+public class Starter extends AbstractVerticle {
     @Override
     public void start() {
-        container.deployVerticle("shared_data_safe/DataRepo.java");
-        container.deployVerticle("shared_data_safe/Producer.java");
-        container.deployVerticle("shared_data_safe/Consumer.java", 5);
+        vertx.deployVerticle("shared_data_safe/DataRepo.java");
+        vertx.deployVerticle("shared_data_safe/Producer.java");
+        vertx.deployVerticle("shared_data_safe/Consumer.java", new DeploymentOptions().setInstances(5));
     }
 }

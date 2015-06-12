@@ -36,7 +36,7 @@
     <mods.directory>target/mods</mods.directory>
 
     <!--Dependency versions-->
-    <vertx.version>2.1.2</vertx.version>
+    <vertx.version>3.0.0-SNAPSHOT</vertx.version>
     <vertx.testtools.version>2.0.3-final</vertx.testtools.version>
     <junit.version>4.11</junit.version>
 
@@ -80,19 +80,13 @@
     </repositories>
 
   <dependencies>
-    <!--Vertx provided dependencies-->
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-core</artifactId>
       <version>${vertx.version}</version>
-      <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>io.vertx</groupId>
-      <artifactId>vertx-platform</artifactId>
-      <version>${vertx.version}</version>
-      <scope>provided</scope>
-    </dependency>
+
+    <!--Vertx provided dependencies-->
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-hazelcast</artifactId>

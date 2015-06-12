@@ -1,7 +1,8 @@
 package shared_data_safe;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.eventbus.Message;
+import io.vertx.core.Handler;
+import io.vertx.core.eventbus.Message;
+import io.vertx.core.logging.LoggerFactory;
 import pl.zdanek.vertx.BaseVerticle;
 
 import java.util.Map;
@@ -12,13 +13,13 @@ public class Consumer extends BaseVerticle {
 
     @Override
     public void start() {
-        getContainer().logger().info("Consumer started! ");
+        LoggerFactory.getLogger(getClass()).info("Consumer started! ");
 
-        vertx.eventBus().registerHandler(CONSUMER_ADDRESS, new Handler<Message<String>>() {
+        vertx.eventBus().consumer(CONSUMER_ADDRESS, new Handler<Message<String>>() {
             @Override
             public void handle(Message<String> message) {
-                getContainer().logger().info(" Received message: " + message.body());
-                getContainer().logger().info(">>Counter " + getCounter());
+                LoggerFactory.getLogger(getClass()).info(" Received message: " + message.body());
+                LoggerFactory.getLogger(getClass()).info(">>Counter " + getCounter());
                 bumpCounter();
             }
         });
@@ -29,7 +30,7 @@ public class Consumer extends BaseVerticle {
     }
 
     private Integer getCounter() {
-        Map<String, Integer> map = vertx.sharedData().getMap(Producer.SHARED_DATA_MAP);
+        Map<String, Integer> map = (Map<String, Integer>) vertx.sharedData().getLocalMap(Producer.SHARED_DATA_MAP);
         return map.get(Producer.COUNTER_KEY);
     }
 }

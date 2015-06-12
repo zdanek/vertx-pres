@@ -1,15 +1,16 @@
 package eventbus_pubsub;
 
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.DeploymentOptions;
 
 /**
  * @author bzd
  */
-public class Starter extends Verticle {
+public class Starter extends AbstractVerticle {
     @Override
     public void start() {
-        container.deployVerticle("eventbus_pubsub/Broadcaster.java");
-        container.deployVerticle("eventbus_pubsub/Consumer.java", 2);
-        container.deployVerticle("eventbus_pubsub/SleepyConsumer.java");
+        vertx.deployVerticle("eventbus_pubsub/Broadcaster.java");
+        vertx.deployVerticle("eventbus_pubsub/Consumer.java", new DeploymentOptions().setInstances(2));
+        vertx.deployVerticle("eventbus_pubsub/SleepyConsumer.java");
     }
 }

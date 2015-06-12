@@ -1,8 +1,7 @@
 package eventbus_pubsub;
 
 import eventbus_p2p.Consumer;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.eventbus.Message;
+import io.vertx.core.Handler;
 import pl.zdanek.vertx.BaseVerticle;
 
 

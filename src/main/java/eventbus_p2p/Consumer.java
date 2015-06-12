@@ -1,7 +1,7 @@
 package eventbus_p2p;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.eventbus.Message;
+import io.vertx.core.Handler;
+import io.vertx.core.eventbus.Message;
 import pl.zdanek.vertx.BaseVerticle;
 
 public class Consumer extends BaseVerticle {
@@ -17,7 +17,7 @@ public class Consumer extends BaseVerticle {
     public void start() {
         getLogger().info("Consumer started! " + hexHashCode());
 
-        vertx.eventBus().registerHandler(CONSUMER_ADDRESS, new Handler<Message<String>>() {
+        vertx.eventBus().consumer(CONSUMER_ADDRESS, new Handler<Message<String>>() {
             @Override
             public void handle(Message<String> message) {
                 getLogger().info(verticleId() + " Received message: " + message.body());

@@ -1,7 +1,7 @@
 package shared_data_safe;
 
 import eventbus_p2p.Consumer;
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 import pl.zdanek.vertx.BaseVerticle;
 
 import java.util.Map;
@@ -36,12 +36,12 @@ public class Producer extends BaseVerticle {
     }
 
     private void initMap() {
-        Map<String, Integer> map = vertx.sharedData().getMap(Producer.SHARED_DATA_MAP);
+        Map<String, Integer> map = (Map<String, Integer>) vertx.sharedData().getLocalMap(Producer.SHARED_DATA_MAP);
         map.put(COUNTER_KEY, 0);
     }
 
     private int getMesgCount() {
-        Map<String, Integer> map = vertx.sharedData().getMap(SHARED_DATA_MAP);
+        Map<String, Integer> map = (Map<String, Integer>) vertx.sharedData().getLocalMap(SHARED_DATA_MAP);
         return map.get(COUNTER_KEY);
     }
 

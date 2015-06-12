@@ -1,8 +1,7 @@
 package eventbus_json;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.eventbus.Message;
-import org.vertx.java.core.json.impl.Json;
+import io.vertx.core.Handler;
+import io.vertx.core.json.Json;
 import pl.zdanek.vertx.BaseVerticle;
 
 

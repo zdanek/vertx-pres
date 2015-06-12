@@ -1,10 +1,11 @@
 package publish;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.Handler;
+import io.vertx.core.logging.LoggerFactory;
 
 
-public class Producer extends Verticle {
+public class Producer extends AbstractVerticle {
 
     private static final long PERIOD_MS = 1000L;
 
@@ -13,13 +14,13 @@ public class Producer extends Verticle {
     @Override
     public void start() {
 
-        getContainer().logger().info("Producer started");
+        LoggerFactory.getLogger(getClass()).info("Producer started");
 
         vertx.setPeriodic(PERIOD_MS, new Handler<Long>() {
 
             @Override
             public void handle(Long timerID) {
-                getContainer().logger().info(" Sending message " + counter);
+                LoggerFactory.getLogger(getClass()).info(" Sending message " + counter);
 
                 vertx.eventBus().publish(Consumer.CONSUMER_ADDRESS,
                         "Message " + counter);

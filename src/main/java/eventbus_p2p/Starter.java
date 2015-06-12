@@ -1,16 +1,17 @@
 package eventbus_p2p;
 
-import org.vertx.java.platform.Verticle;
+
+import io.vertx.core.AbstractVerticle;
 
 /**
  * @author bzd
  */
-public class Starter extends Verticle {
+public class Starter extends AbstractVerticle {
     @Override
     public void start() {
-        container.deployVerticle("eventbus_p2p/Producer.java");
-        container.deployVerticle("eventbus_p2p/ConsumerSimple.java");
-//        container.deployVerticle("eventbus_p2p/Consumer.java");
-//        container.deployVerticle("eventbus_p2p/Consumer.java", 3);
+        vertx.deployVerticle("eventbus_p2p/Producer.java");
+        vertx.deployVerticle("eventbus_p2p/ConsumerSimple.java");
+//        vertx.deployVerticle("eventbus_p2p/Consumer.java");
+//        vertx.deployVerticle("eventbus_p2p/Consumer.java", 3);
     }
 }

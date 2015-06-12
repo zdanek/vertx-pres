@@ -1,9 +1,9 @@
 package web;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.Handler;
 
-public class AnotherPublisher extends Verticle {
+public class AnotherPublisher extends AbstractVerticle {
 
     @Override
     public void start() {

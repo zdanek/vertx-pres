@@ -1,19 +1,21 @@
-import org.vertx.java.core.Future;
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.logging.Logger;
+import io.vertx.core.logging.impl.LoggerFactory;
 
 import java.lang.Override;
 import java.lang.Void;
 
-public class HelloClient extends Verticle {
+public class HelloClient extends AbstractVerticle {
 
     @Override
     public void start() {
-        getContainer().logger().info("Hello vert.x");
+        Logger log = LoggerFactory.getLogger(HelloClient.class);
+        log.info("Hello vert.x");
 
     }
 
 /*    @Override
     public void start(Future<Void> startedResult) {
-        getContainer().logger().info(startedResult.complete());
+        LoggerFactory.getLogger(getClass()).info(startedResult.complete());
     }*/
 }

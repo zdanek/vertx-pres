@@ -1,14 +1,15 @@
 package publish;
 
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.DeploymentOptions;
 
 /**
  * @author bzd
  */
-public class Starter extends Verticle {
+public class Starter extends AbstractVerticle {
     @Override
     public void start() {
-        container.deployVerticle("publish/Producer.java");
-        container.deployVerticle("publish/Consumer.java", 4);
+        vertx.deployVerticle("publish/Producer.java");
+        vertx.deployVerticle("publish/Consumer.java", new DeploymentOptions().setInstances(10));
     }
 }

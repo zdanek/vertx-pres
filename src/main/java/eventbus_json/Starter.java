@@ -1,14 +1,14 @@
 package eventbus_json;
 
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
 
 /**
  * @author bzd
  */
-public class Starter extends Verticle {
+public class Starter extends AbstractVerticle {
     @Override
     public void start() {
-        container.deployVerticle("eventbus_json/Producer.java");
-        container.deployVerticle("eventbus_json/Consumer.java");
+        vertx.deployVerticle("eventbus_json/Producer.java");
+        vertx.deployVerticle("eventbus_json/Consumer.java");
     }
 }

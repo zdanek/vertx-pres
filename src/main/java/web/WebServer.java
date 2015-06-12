@@ -1,12 +1,11 @@
 package web;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.http.HttpServerRequest;
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.Handler;
+import io.vertx.core.http.HttpServerRequest;
+import io.vertx.core.logging.LoggerFactory;
 
-import java.lang.Override;
-
-public class WebServer extends Verticle {
+public class WebServer extends AbstractVerticle {
 
     private final static String ROOT = "web";
 
@@ -17,16 +16,16 @@ public class WebServer extends Verticle {
             @Override
             public void handle(HttpServerRequest request) {
 
-                getContainer().logger().info("Got request " + request.path());
+                LoggerFactory.getLogger(getClass()).info("Got request " + request.path());
                 String path = request.path();
                 if ("/".equals(path)) {
                     path = "/index.html";
                 }
 
-                request.response().sendFile(ROOT + path, ROOT + "/404.html");
+                request.response().sendFile(ROOT + path);
             }
         }).listen(8080);
 
-        getContainer().logger().info("Server ready!");
+        LoggerFactory.getLogger(getClass()).info("Server ready!");
     }
 }

@@ -1,7 +1,7 @@
 package shared_data_safe;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.eventbus.Message;
+import io.vertx.core.Handler;
+import io.vertx.core.eventbus.Message;
 import pl.zdanek.vertx.BaseVerticle;
 
 import java.util.Map;
@@ -16,7 +16,7 @@ public class DataRepo extends BaseVerticle {
     @Override
     public void start() {
 
-        vertx.eventBus().registerHandler(BUMP_COUNTER_ADDRESS, new Handler<Message>() {
+        vertx.eventBus().consumer(BUMP_COUNTER_ADDRESS, new Handler<Message<String>>() {
             @Override
             public void handle(Message event) {
                 bumpCounter();
@@ -25,7 +25,7 @@ public class DataRepo extends BaseVerticle {
     }
 
     private void bumpCounter() {
-        Map<String, Integer> map = vertx.sharedData().getMap(Producer.SHARED_DATA_MAP);
+        Map<String, Integer> map = (Map<String, Integer>) vertx.sharedData().getLocalMap(Producer.SHARED_DATA_MAP);
         Integer counter = map.get(Producer.COUNTER_KEY);
         counter++;
         getLogger().info("Increased to [" + counter + "]");

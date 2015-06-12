@@ -1,11 +1,13 @@
 package hello;
 
-import org.vertx.java.platform.Verticle;
 
-public class HelloVerticle extends Verticle {
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.logging.LoggerFactory;
+
+public class HelloVerticle extends AbstractVerticle {
     @Override
     public void start() {
-        container.logger().info("Hello JDay");
+        LoggerFactory.getLogger(getClass()).info("Hello JDay");
     }
 }
 

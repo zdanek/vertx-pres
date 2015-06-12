@@ -1,9 +1,8 @@
 package eventbus_p2p;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.eventbus.Message;
-import org.vertx.java.core.logging.Logger;
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
+import io.vertx.core.eventbus.Message;
 import pl.zdanek.vertx.BaseVerticle;
 
 
@@ -30,12 +29,13 @@ public class Producer extends BaseVerticle {
                 getLogger().info(verticleId() + " Sending message " + counter);
 
                 vertx.eventBus().send(Consumer.CONSUMER_ADDRESS,
-                        "Message " + counter, new Handler<Message<String>>() {
+                        "Message " + counter, new Handler<AsyncResult<Message<String>>>() {
 
-                    @Override
-                    public void handle(Message<String> reply) {
-                        sout("Received reply: " + reply.body());
-                    }
+                        @Override
+                        public void handle(AsyncResult<Message<String>> event) {
+                            sout("Received reply: " + event.result().body());
+
+                        }
                 });
                 counter++;
             }
