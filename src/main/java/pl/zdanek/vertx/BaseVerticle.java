@@ -34,5 +34,4 @@ public abstract class BaseVerticle extends AbstractVerticle {
     protected String hexHashCode() {
         return Integer.toHexString(hashCode());
     }
-
 }

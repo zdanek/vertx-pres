@@ -1,23 +1,25 @@
 package eventbus_p2p;
 
 
-import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Handler;
 import io.vertx.core.eventbus.Message;
+import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
+import pl.zdanek.vertx.BaseVerticle;
 
-public class ConsumerSimple extends AbstractVerticle {
+public class ConsumerSimple extends BaseVerticle {
 
     public static final String CONSUMER_ADDRESS = "consumer.address";
+    private Logger logger = LoggerFactory.getLogger(getClass());
 
     @Override
     public void start() {
-        LoggerFactory.getLogger(getClass()).info("Consumer started! ");
+        logger.info("Consumer started! ");
 
         vertx.eventBus().consumer(CONSUMER_ADDRESS, new Handler<Message<String>>() {
             @Override
             public void handle(Message<String> message) {
-                LoggerFactory.getLogger(getClass()).info(" Received message: " + message.body());
+                logger.info(" Received message: " + message.body());
             }
         });
     }

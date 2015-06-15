@@ -1,11 +1,10 @@
 package web;
 
-import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Handler;
 import io.vertx.core.http.HttpServerRequest;
-import io.vertx.core.logging.LoggerFactory;
+import pl.zdanek.vertx.BaseVerticle;
 
-public class WebServer extends AbstractVerticle {
+public class WebServer extends BaseVerticle {
 
     private final static String ROOT = "web";
 
@@ -16,7 +15,7 @@ public class WebServer extends AbstractVerticle {
             @Override
             public void handle(HttpServerRequest request) {
 
-                LoggerFactory.getLogger(getClass()).info("Got request " + request.path());
+                getLogger().info("Got request " + request.path());
                 String path = request.path();
                 if ("/".equals(path)) {
                     path = "/index.html";
@@ -26,6 +25,6 @@ public class WebServer extends AbstractVerticle {
             }
         }).listen(8080);
 
-        LoggerFactory.getLogger(getClass()).info("Server ready!");
+        getLogger().info("Server ready!");
     }
 }
