@@ -36,7 +36,7 @@ public class Producer extends BaseVerticle {
     }
 
     private void initMap() {
-        Map<String, Integer> map = (Map<String, Integer>) vertx.sharedData().getLocalMap(Producer.SHARED_DATA_MAP);
+        Map<String, Integer> map =  vertx.sharedData().getLocalMap(Producer.SHARED_DATA_MAP);
         map.put(COUNTER_KEY, 0);
     }
 

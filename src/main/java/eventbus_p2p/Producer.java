@@ -3,6 +3,7 @@ package eventbus_p2p;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
 import io.vertx.core.eventbus.Message;
+import io.vertx.core.eventbus.ReplyException;
 import pl.zdanek.vertx.BaseVerticle;
 
 
@@ -33,8 +34,15 @@ public class Producer extends BaseVerticle {
 
                         @Override
                         public void handle(AsyncResult<Message<String>> event) {
-                            sout("Received reply: " + event.result().body());
-
+                            if (event.succeeded()) {
+                                sout("Received reply: " + event.result().body());
+                            }
+                            if (event.failed()) {
+                                sout(event.cause().getClass().getName());
+                                ReplyException e = (ReplyException) event.cause();
+                                e.failureType();
+                                event.cause().printStackTrace();
+                            }
                         }
                 });
                 counter++;

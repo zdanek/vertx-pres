@@ -5,6 +5,15 @@ import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerRequest;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.logging.LoggerFactory;
+import io.vertx.core.net.NetServer;
+import io.vertx.core.net.NetServerOptions;
+import io.vertx.core.net.NetSocket;
+import io.vertx.ext.web.Router;
+import io.vertx.ext.web.handler.StaticHandler;
+import io.vertx.ext.web.handler.sockjs.BridgeEvent;
+import io.vertx.ext.web.handler.sockjs.BridgeOptions;
+import io.vertx.ext.web.handler.sockjs.PermittedOptions;
+import io.vertx.ext.web.handler.sockjs.SockJSHandler;
 import pl.zdanek.vertx.BaseVerticle;
 
 public class WebWithEB extends BaseVerticle {
@@ -31,9 +40,27 @@ public class WebWithEB extends BaseVerticle {
             }
         });
 
+        NetServer nserver = vertx.createNetServer(
+            new NetServerOptions().setPort(1234).setHost("localhost")
+        );
+        nserver.connectHandler((NetSocket sock) -> {
+
+            sock.handler(buffer -> {
+                // Write the data straight back
+                sock.write(buffer);
+            });
+        }).listen();
+
         createEventBusToJSBridge(server);
 
-        server.listen(8080);
+        server.listen(8080, res -> {
+            if (res.succeeded()) {
+                getLogger().info("Sucessfuly started HTTP server");
+            }
+            if (res.failed()) {
+                getLogger().error("Error starting HTTP server", res.cause());
+            }
+        });
 
         vertx.setPeriodic(4000L, new Handler<Long>() {
 
@@ -53,6 +80,8 @@ public class WebWithEB extends BaseVerticle {
         JsonObject config = new JsonObject().put("prefix", "/eventbus");
 //        TODO fix here
 //        vertx.createSockJSServer(server).bridge(config, new JsonArray(), new JsonArray().add(new JsonObject().put("address", "web.client")));
+
+        server.requestHandler();
 
         Router router = Router.router(vertx);
 
