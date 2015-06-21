@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>pl.zdanek</groupId>
-  <artifactId>raspi</artifactId>
+  <artifactId>vertx-pres</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>Project - raspi</name>
-  <url>http://maven.apache.org</url>
+  <name>Vert.x 3 presentation</name>
+  <url>https://github.com/zdanek/</url>
 
   <parent>
      <groupId>org.sonatype.oss</groupId>
@@ -17,28 +17,12 @@
   </parent>
 
   <properties>
+    <stack.version>3.0.0-SNAPSHOT</stack.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-    <!-- Set pullInDeps to true if you want any modules specified in the 'includes' and 'deploys' fields
-    in your mod.json to be automatically pulled in during packaging and added inside your module. Doing this means your
-    module won't download and install those dependencies at run-time when they're first requested. -->
-    <vertx.pullInDeps>false</vertx.pullInDeps>
-
-    <!-- Set createFatJar to true if you want to create a fat executable jar which contains the Vert.x binaries
-    along with the module so it can be run with java -jar <jarname> -->
-    <vertx.createFatJar>false</vertx.createFatJar>
-
-    <!--Vertx module name-->
-    <module.name>${project.groupId}~${project.artifactId}~${project.version}</module.name>
-
-    <!-- The directory where the module will be assembled - you can override this on the command line
-    with -Dmods.directory=mydir -->
-    <mods.directory>target/mods</mods.directory>
+    <main.class>eventbus_pubsub.FatStarter</main.class>
 
     <!--Dependency versions-->
-    <vertx.version>3.0.0-SNAPSHOT</vertx.version>
     <vertx.testtools.version>2.0.3-final</vertx.testtools.version>
-    <junit.version>4.11</junit.version>
 
     <!--Plugin versions-->
     <maven.compiler.plugin.version>3.0</maven.compiler.plugin.version>
@@ -79,48 +63,45 @@
         </repository>
     </repositories>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>vertx-dependencies</artifactId>
+        <version>${stack.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-core</artifactId>
-      <version>${vertx.version}</version>
     </dependency>
-
-    <!--Vertx provided dependencies-->
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-hazelcast</artifactId>
-      <version>${vertx.version}</version>
       <scope>provided</scope>
     </dependency>
+
     <!--Test dependencies-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.vertx</groupId>
-      <artifactId>testtools</artifactId>
-      <version>${vertx.testtools.version}</version>
       <scope>test</scope>
     </dependency>
       <dependency>
           <groupId>io.vertx</groupId>
           <artifactId>vertx-web</artifactId>
-          <version>${vertx.version}</version>
       </dependency>
-
-    <!-- Add any other dependencies that you want packaged into your module (in the lib dir) here
-    as 'compile' dependencies. Here is an example
-    <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-core</artifactId>
-      <version>1.3</version>
-      <scope>compile</scope>
-    </dependency>
-    -->
 
           <dependency>
               <groupId>org.twitter4j</groupId>
@@ -158,18 +139,18 @@
         </configuration>
         -->
         <!-- Make sure that the plugin uses the vert.x versions from this pom.xml not from its own pom.xml -->
+        <!--
         <dependencies>
           <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
-            <version>${vertx.version}</version>
           </dependency>
           <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-hazelcast</artifactId>
-            <version>${vertx.version}</version>
           </dependency>
         </dependencies>
+        -->
         <executions>
           <execution>
             <id>PullInDeps</id>
@@ -185,51 +166,11 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven.compiler.plugin.version}</version>
+        <version>3.1</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>${maven.resources.plugin.version}</version>
-        <executions>
-          <execution>
-            <id>copy-mod-to-target</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <overwrite>true</overwrite>
-              <outputDirectory>${mods.directory}/${module.name}</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>target/classes</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>${maven.dependency.plugin.version}</version>
-        <executions>
-          <execution>
-            <id>copy-mod-dependencies-to-target</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${mods.directory}/${module.name}/lib</outputDirectory>
-              <includeScope>runtime</includeScope>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -246,12 +187,6 @@
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>${maven.failsafe.plugin.version}</version>
         <configuration>
-          <systemProperties>
-            <property>
-              <name>vertx.mods</name>
-              <value>${mods.directory}</value>
-            </property>
-          </systemProperties>
           <includes>
             <include>**/integration/**/*Test*</include>
           </includes>
@@ -286,23 +221,35 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <configuration>
-          <descriptors>
-            <descriptor>src/main/assembly/mod.xml</descriptor>
-          </descriptors>
-        </configuration>
-        <executions>
-          <execution>
-            <id>assemble</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>2.3</version>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>shade</goal>
+              </goals>
+              <configuration>
+                <transformers>
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                    <manifestEntries>
+                      <Main-Class>${main.class}</Main-Class>
+                    </manifestEntries>
+                  </transformer>
+                  <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                    <resource>META-INF/services/io.vertx.core.spi.VerticleFactory</resource>
+                  </transformer>
+                </transformers>
+                <artifactSet>
+                </artifactSet>
+                <outputFile>${project.build.directory}/${project.artifactId}-${project.version}-fat.jar</outputFile>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
     </plugins>
 
   </build>
@@ -316,7 +263,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>${maven.javadoc.plugin.version}</version>
         <configuration>
           <aggregate>true</aggregate>
         </configuration>

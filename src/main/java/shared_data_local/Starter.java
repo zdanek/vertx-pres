@@ -1,4 +1,4 @@
-package shared_data;
+package shared_data_local;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.DeploymentOptions;
@@ -9,7 +9,7 @@ import io.vertx.core.DeploymentOptions;
 public class Starter extends AbstractVerticle {
     @Override
     public void start() {
-        vertx.deployVerticle("shared_data/Producer.java");
-        vertx.deployVerticle("shared_data/Consumer.java", new DeploymentOptions().setInstances(5));
+        vertx.deployVerticle("shared_data_local/Producer.java");
+        vertx.deployVerticle("shared_data_local/Consumer.java", new DeploymentOptions().setInstances(5));
     }
 }
