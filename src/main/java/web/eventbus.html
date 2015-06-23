@@ -2,7 +2,7 @@
 <html>
 <head>
     <script src="js/jquery-1.9.0.min.js"></script>
-    <script src="js/sockjs-0.3.js"></script>
+    <script src="js/sockjs-0.3.4.min.js"></script>
     <script src="js/vertxbus.js"></script>
 
     <title>EventBus example</title>
@@ -13,10 +13,16 @@
             var eb = new vertx.EventBus(window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/eventbus');
 
             eb.onopen = function() {
-                console.log('EB open')
+                console.log('EB opened')
                 eb.registerHandler('web.client', function(messageFromPublisher) {
                     console.log('Message from backed: ' + messageFromPublisher);
                     $('div#messages').append(messageFromPublisher + "<br />")
+                })
+                eb.registerHandler('secret.address', function(messageFromPublisher) {
+                    console.log('Secret message: ' +
+                            messageFromPublisher);
+                    $('div#messages').append("Secret: " +
+                    messageFromPublisher + "<br />")
                 })
             }
         })
