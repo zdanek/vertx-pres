@@ -7,7 +7,8 @@ import io.vertx.core.logging.LoggerFactory;
 public class HelloVerticle extends AbstractVerticle {
     @Override
     public void start() {
-        LoggerFactory.getLogger(getClass()).info("Hello JDay");
+        LoggerFactory.getLogger(getClass()).info(
+            "Hola Barcelona!");
     }
 }
 

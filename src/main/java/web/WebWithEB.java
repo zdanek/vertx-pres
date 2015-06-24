@@ -32,8 +32,7 @@ public class WebWithEB extends BaseVerticle {
         router.route().handler(FaviconHandler.create
             (ROOT + "/favicon.ico"));
 
-        router.route().handler(StaticHandler.create
-            (ROOT));
+        router.route().handler(StaticHandler.create(ROOT));
 
         server.requestHandler(router::accept).listen(8080);
 

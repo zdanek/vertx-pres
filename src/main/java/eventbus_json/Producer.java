@@ -1,6 +1,5 @@
 package eventbus_json;
 
-import io.vertx.core.Handler;
 import io.vertx.core.json.Json;
 import pl.zdanek.vertx.BaseVerticle;
 
@@ -21,18 +20,14 @@ public class Producer extends BaseVerticle {
 
         getLogger().info("Producer started");
 
-        vertx.setPeriodic(PERIOD_MS, new Handler<Long>() {
+        vertx.setPeriodic(PERIOD_MS, timerID -> {
+            Data data = new Data("Zdanek", counter);
 
-            @Override
-            public void handle(Long timerID) {
-                Data data = new Data("Zdanek", counter);
+            getLogger().info(verticleId() + " Sending message " + data);
 
-                getLogger().info(verticleId() + " Sending message " + data);
+            vertx.eventBus().send(Consumer.CONSUMER_ADDRESS, Json.encode(data));
 
-                vertx.eventBus().send(Consumer.CONSUMER_ADDRESS, Json.encode(data));
-
-                counter++;
-            }
+            counter++;
         });
     }
 
