@@ -10,6 +10,11 @@ public class Starter extends AbstractVerticle {
     public void start() throws Exception {
 
         vertx.deployVerticle("reactor/First.java");
+        //add more instances
+/*
+        vertx.deployVerticle("reactor/First.java", new
+            DeploymentOptions().setInstances(16));
+            */
         vertx.deployVerticle("reactor/Second.java");
     }
 }

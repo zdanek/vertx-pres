@@ -13,8 +13,9 @@ public final class LogSupport {
     public static void logVerticle(Verticle verticle) {
         LoggerFactory.getLogger(verticle.getClass().getName())
             .info(">" + hexHashCode(verticle) +
-                " [" + currentThreadName() + "] ");
-        ;
+                " [" + currentThreadName() + "] " +
+                verticle.getClass().getSimpleName());
+
     }
 
     private static String currentThreadName() {

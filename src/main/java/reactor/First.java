@@ -15,6 +15,7 @@ public class First extends AbstractVerticle {
         vertx.setPeriodic(3000L, new Handler<Long>() {
             @Override
             public void handle(Long timerId) {
+
                 LogSupport.logVerticle(First.this);
             }
         });
