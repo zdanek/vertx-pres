@@ -17,13 +17,18 @@ public class SleepyConsumer extends BaseVerticle {
     @Override
     public void start() {
         getLogger().info(vertx.hashCode());
-        getLogger().info(verticleId() + "Consumer started! " + hashCode());
+        getLogger().info(verticleId() + "SleepyConsumer started!" +
+            " " + hashCode());
 
-        vertx.eventBus().consumer(CONSUMER_ADDRESS, new Handler<Message<String>>() {
+        vertx.eventBus().consumer(CONSUMER_ADDRESS,
+            new Handler<Message<String>>() {
             @Override
             public void handle(Message<String> message) {
 
-                getLogger().info(verticleId() + "Received message: " + message.body());
+                getLogger().info("------\n" + verticleId() +
+                    "\nReceived message: " + message.body() +
+                    "\n");
+
                 sleep(SLEEP_TIME_MS);
             }
         });

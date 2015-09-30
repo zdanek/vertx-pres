@@ -10,7 +10,8 @@ import pl.zdanek.vertx.BaseVerticle;
  */
 public class RestServer extends BaseVerticle {
     private static final String JSON_CT = "application/json";
-//    public static final String CT_HEADER = "Content-Type";
+    // /    public static final String CT_HEADER =
+    // "Content-Type";
 
     public RestServer() {
         System.setProperty("vertx.disableFileCaching", "true");

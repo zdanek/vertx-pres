@@ -11,6 +11,6 @@ public class First extends AbstractVerticle {
     public void start() throws Exception {
 
         LoggerFactory.getLogger(getClass().getName())
-            .info("Hola Barcelona");
+            .info("Hello Vert.x");
     }
 }

@@ -25,22 +25,27 @@ public class Producer extends BaseVerticle {
 
             @Override
             public void handle(Long timerID) {
-                getLogger().info(verticleId() + " Sending message " + counter);
-                getLogger().info("Messages received counter from shared data" + getMesgCount());
+                getLogger().info(verticleId() +
+                    " Sending message " + counter);
+                getLogger().info("Messages received counter from " +
+                    "shared data: " + getMesgCount());
 
-                vertx.eventBus().publish(Consumer.CONSUMER_ADDRESS, "Message " + counter);
+                vertx.eventBus().publish(Consumer.CONSUMER_ADDRESS,
+                    "Message " + counter);
                 counter++;
             }
         });
     }
 
     private void initMap() {
-        LocalMap<String, Integer> map = vertx.sharedData().getLocalMap(Producer.SHARED_DATA_MAP);
+        LocalMap<String, Integer> map =
+            vertx.sharedData().getLocalMap(Producer.SHARED_DATA_MAP);
         map.put(COUNTER_KEY, 0);
     }
 
     private int getMesgCount() {
-        LocalMap<String, Integer> map = vertx.sharedData().getLocalMap(SHARED_DATA_MAP);
+        LocalMap<String, Integer> map =
+            vertx.sharedData().getLocalMap(SHARED_DATA_MAP);
         return map.get(COUNTER_KEY);
     }
 

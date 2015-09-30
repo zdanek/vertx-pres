@@ -3,28 +3,41 @@ package eventbus_pubsub;
 import io.vertx.core.Handler;
 import io.vertx.core.eventbus.Message;
 import pl.zdanek.vertx.BaseVerticle;
+import pl.zdanek.vertx.LogSupport;
 
 public class Consumer extends BaseVerticle {
 
     public static final String CONSUMER_ADDRESS = "consumer.address";
 
     public Consumer() {
-        sout("Consumer");
-        sout(this.getClass().getClassLoader().toString());
+        getLogger().info("Consumer");
     }
 
     @Override
     public void start() {
-        getLogger().info(vertx.hashCode());
-        getLogger().info(verticleId() + "Consumer started! " + hashCode());
+        LogSupport.logVerticle(this);
+        getLogger().info("Consumer started! " + hashCode());
 
-        vertx.eventBus().consumer(CONSUMER_ADDRESS, new Handler<Message<String>>() {
+        vertx.eventBus().consumer(CONSUMER_ADDRESS,
+            new Handler<Message<String>>() {
             @Override
             public void handle(Message<String> message) {
 
-                getLogger().info(verticleId() + " Received message: " + message.body());
+                getLogger().info("------\n" + verticleId() +
+                    "\nReceived message: " + message.body() +
+                    "\n");
             }
         });
     }
+
+   @Override
+public void start() {
+    getLogger().info("Consumer started! " + hashCode());
+
+    vertx.eventBus().consumer(CONSUMER_ADDRESS, message -> {
+
+    getLogger().info("Received message: " + message.body());
+    });
+}
 
 }

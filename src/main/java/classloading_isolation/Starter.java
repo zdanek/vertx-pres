@@ -11,6 +11,6 @@ public class Starter extends AbstractVerticle {
     public void start() throws Exception {
 
         vertx.deployVerticle("classloading_isolation/Instance.java",
-            new DeploymentOptions().setInstances(5));
+            new DeploymentOptions().setInstances(50));
     }
 }

@@ -13,6 +13,6 @@ public class Starter extends AbstractVerticle {
         vertx.deployVerticle("eventbus_pubsub/SleepyConsumer" +
             ".java");
         vertx.deployVerticle("eventbus_pubsub/Consumer.java",
-            new DeploymentOptions().setInstances(2));
+            new DeploymentOptions().setInstances(3));
     }
 }

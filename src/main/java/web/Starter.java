@@ -11,7 +11,7 @@ public class Starter extends BaseVerticle {
 
         vertx.deployVerticle("web/WebWithEB.java");
         vertx.deployVerticle("web/Producer.java");
-        vertx.deployVerticle("web/NotPermitted.java");
+//        vertx.deployVerticle("web/NotPermitted.java");
 //        vertx.deployVerticle("web/NervousProducer.java");
     }
 }

@@ -24,7 +24,16 @@ public class ProducerWithResponseHandler extends BaseVerticle {
                     "\nSending message " + counter + "\n");
 
             vertx.eventBus().send(Consumer.CONSUMER_ADDRESS,
-                "Job_to_be_done-" + counter);
+                "Job_to_be_done-" + counter, deliveryStat ->
+                {
+                    if (deliveryStat.succeeded()) {
+                        getLogger().info("Delivered");
+                    } else {
+                        getLogger().error("Failed!",
+                            deliveryStat.cause());
+                    }
+                }
+            );
 
             counter++;
         });

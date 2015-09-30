@@ -1,15 +1,11 @@
 package eventbus_p2p;
 
-import io.vertx.core.AsyncResult;
-import io.vertx.core.Handler;
-import io.vertx.core.eventbus.Message;
-import io.vertx.core.eventbus.ReplyException;
 import pl.zdanek.vertx.BaseVerticle;
 
 
 public class Producer extends BaseVerticle {
 
-    private static final long PERIOD_MS = 1000L;
+    private static final long PERIOD_MS = 2000L;
 
     private int counter = 0;
 
@@ -23,30 +19,14 @@ public class Producer extends BaseVerticle {
 
         getLogger().info("Producer started");
 
-        vertx.setPeriodic(PERIOD_MS, new Handler<Long>() {
+        vertx.setPeriodic(PERIOD_MS, timerID -> {
+            getLogger().info("======\n" + verticleId() +
+                    "\nSending message " + counter + "\n");
 
-            @Override
-            public void handle(Long timerID) {
-                getLogger().info(verticleId() + " Sending message " + counter);
+            vertx.eventBus().send(Consumer.CONSUMER_ADDRESS,
+                    "Job_to_be_done-" + counter);
 
-                vertx.eventBus().send(Consumer.CONSUMER_ADDRESS,
-                        "Message " + counter, new Handler<AsyncResult<Message<String>>>() {
-
-                        @Override
-                        public void handle(AsyncResult<Message<String>> event) {
-                            if (event.succeeded()) {
-                                sout("Received reply: " + event.result().body());
-                            }
-                            if (event.failed()) {
-                                sout(event.cause().getClass().getName());
-                                ReplyException e = (ReplyException) event.cause();
-                                e.failureType();
-                                event.cause().printStackTrace();
-                            }
-                        }
-                });
-                counter++;
-            }
+            counter++;
         });
     }
 

@@ -22,7 +22,8 @@ public abstract class BaseVerticle extends AbstractVerticle {
     }
 
     protected void sleep(Long sleepTimeMs) {
-        getLogger().info(verticleId() + "Sleeping " + sleepTimeMs);
+        getLogger().info(verticleId() + "\nSleeping " +
+            sleepTimeMs);
         try {
             Thread.sleep(sleepTimeMs);
         } catch (InterruptedException e) {
