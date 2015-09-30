@@ -20,8 +20,7 @@ public class UserEndpointServer extends AbstractVerticle {
         Router router = new RouterImpl(vertx);
 
         router.get("/users/:uid")
-            //.consumes(JSON_CT).
-        .handler( ctx -> {
+        .handler(ctx -> {
             String id = ctx.request().getParam("uid");
             JsonObject user = new JsonObject().put("id", id).put("name", "bartek");
             ctx.response().end(user.encode());
@@ -29,6 +28,12 @@ public class UserEndpointServer extends AbstractVerticle {
 
         HttpServer server = vertx.createHttpServer();
         server.requestHandler(router::accept).listen(8080);
+
+
+        router.post("/some/post/path")
+        router.put()
+        router.get("/user/data").consumes("application/json")
+        router.get("/user/data").consumes("text/html")
 
 
         LoggerFactory.getLogger(getClass()).info("Deployed " + UserEndpointServer.class.getName());

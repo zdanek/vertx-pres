@@ -29,15 +29,4 @@ public class Consumer extends BaseVerticle {
             }
         });
     }
-
-   @Override
-public void start() {
-    getLogger().info("Consumer started! " + hashCode());
-
-    vertx.eventBus().consumer(CONSUMER_ADDRESS, message -> {
-
-    getLogger().info("Received message: " + message.body());
-    });
-}
-
 }

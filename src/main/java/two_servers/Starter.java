@@ -1,6 +1,7 @@
 package two_servers;
 
 import io.vertx.core.AbstractVerticle;
+import io.vertx.core.Vertx;
 
 /**
  * @author bzd
@@ -8,7 +9,11 @@ import io.vertx.core.AbstractVerticle;
 public class Starter extends AbstractVerticle {
     @Override
     public void start() {
-        vertx.deployVerticle("two_servers/CustomerEndpointServer.java");
-        vertx.deployVerticle("two_servers/UserEndpointServer.java");
+        vertx.deployVerticle(CustomerEndpointServer.class.getName());
+        vertx.deployVerticle(UserEndpointServer.class.getName());
+    }
+
+    public static void main(String args[]) {
+        Vertx.vertx().deployVerticle(Starter.class.getName());
     }
 }
