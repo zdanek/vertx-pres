@@ -1,11 +1,12 @@
-require 'vertx/vertx'
-vertx = Vertx::Vertx.vertx()
 
-eventBus = vertx.event_bus()
+puts "Ruby for the win!"
 
-vertx.set_periodic(2000) { |id|
-  # This handler will get called every second
-  puts "timer fired!"
-    eventBus.publish("producer.address", "I was written in Ruby!")
+eb = $vertx.event_bus()
+
+# Send a message every second
+
+$vertx.set_periodic(1000) { |v|
+    puts "RUBY: sending Ruby message"
+    eb.publish("producer.address", "Ruby shines!")
 }
 

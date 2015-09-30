@@ -10,6 +10,10 @@ public class Starter extends AbstractVerticle {
     @Override
     public void stop() throws Exception {
 
-        vertx.deployVerticle("polyglot/Producer.rb");
+        vertx.deployVerticle("polyglot/Producer.rb", res -> {
+            System.out.println("ddd");
+            System.out.println(res.succeeded());
+        });
+        vertx.deployVerticle("polyglot/Receiver.js");
     }
 }
